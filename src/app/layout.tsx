@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | React/Next.js Developer",
-  description: "Professional portfolio showcasing projects and experience in web development",
+  title: "Jainil Portfolio",
+  description: "Jainil Vyas personal portfolio",
+  verification: {
+    google: "qZpj2svzehHxaWyXM3O5Uwxm5nuNNMMMZjksOFs2_EM"  // <-- Paste your code here
+  },
 };
 
 export default function RootLayout({
