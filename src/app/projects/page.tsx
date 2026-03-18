@@ -13,7 +13,7 @@ export default function ProjectsPage() {
       description: 'Full-stack platform for discovering and booking trekking adventures with user authentication, trek listings, booking management, and payment integration.',
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML/CSS'],
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80',
-      link: '#',
+      link: 'https://soul-trekker-the-trekking-website.vercel.app/',
     },
     {
       id: 2,
@@ -79,6 +79,14 @@ export default function ProjectsPage() {
       image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=80',
       link: '#',
     },
+    {
+      id: 10,
+      title: 'Rentwheels (Car Rental Management System)',
+      description: 'A comprehensive car rental management platform that streamlines booking, fleet management, and customer relations.',
+      tech: ['.NET MVC', 'C#', 'SQL Server'],
+      image: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500&q=80',
+      link: 'https://rentalwheels-1.onrender.com/',
+    },
   ];
 
   return (
@@ -123,14 +131,10 @@ export default function ProjectsPage() {
                         backgroundPosition: 'center',
                       }}
                     />
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                      <p className="text-white text-sm font-semibold">Click to explore →</p>
-                    </div>
 
                     {/* Category Badge */}
                     <div className="absolute top-4 right-4 bg-blue-500/90 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
-                      {index < 3 ? '⚛️ React' : index < 6 ? '🐍 Python' : index < 8 ? '☕ Java' : '🔌 IoT'}
+                      {index < 4 ? '⚛️ React' : index < 6 ? '🐍 Python' : index < 8 ? '☕ Java' : index < 9 ? '🔌 IoT' : '🌐 .NET'}
                     </div>
                   </div>
 
@@ -162,13 +166,21 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* CTA Button */}
-                    <a
-                      href={project.link}
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-sm group/link"
-                    >
-                      <span>View Project</span>
-                      <span className="transition-transform group-hover/link:translate-x-1">→</span>
-                    </a>
+                    {project.link !== '#' ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold text-sm group/link"
+                      >
+                        <span>View Project</span>
+                        <span className="transition-transform group-hover/link:translate-x-1">→</span>
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center gap-2 text-gray-400 font-bold text-sm cursor-not-allowed" title="Link coming soon">
+                        <span>No Link Available</span>
+                      </span>
+                    )}
                   </div>
                 </div>
               ))}
@@ -177,7 +189,7 @@ export default function ProjectsPage() {
             {/* View More */}
             <div className="text-center mt-16 animate-slide-in-up">
               <p className="text-gray-600 mb-4">Want to see more projects or discuss collaborations?</p>
-              <a href="/#contact" className="btn-primary">
+              <a href="#contact" className="btn-primary">
                 Get In Touch
               </a>
             </div>

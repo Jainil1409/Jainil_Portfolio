@@ -1,3 +1,5 @@
+import Hero3DObject from './Hero3DObject';
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden flex items-center">
@@ -8,6 +10,9 @@ export default function Hero() {
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/30 pointer-events-none"></div>
+
+      {/* 3D Rotating Shape */}
+      <Hero3DObject />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 w-full">
         <div className="animate-fade-in">

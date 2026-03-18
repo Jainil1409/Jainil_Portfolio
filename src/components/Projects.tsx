@@ -29,6 +29,15 @@ export default function Projects() {
       link: '#',
       status: 'Featured',
     },
+    {
+      id: 4,
+      title: 'Rentwheels (Car Rental Management System)',
+      description: 'A comprehensive car rental management platform that streamlines booking, fleet management, and customer relations.',
+      tech: ['.NET MVC', 'C#', 'SQL Server'],
+      image: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500&q=80',
+      link: 'https://rentalwheels-1.onrender.com/',
+      status: 'Featured',
+    },
   ];
 
   return (
@@ -66,7 +75,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-900/30"></div>
                 <p className="text-white text-center text-sm font-semibold relative z-10 px-4">{project.title}</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 relative">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{project.title}</h3>
                   <span className="text-xs bg-gradient-to-r from-blue-100 to-purple-100 text-blue-600 px-3 py-1 rounded-full whitespace-nowrap font-semibold">
@@ -86,12 +95,25 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  className="text-blue-600 hover:text-blue-700 font-semibold text-sm link-underline"
-                >
-                  View Project →
-                </a>
+                {project.link !== '#' ? (
+                  <div className="relative z-50">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-sm group/link cursor-pointer"
+                    >
+                      <span>View Project</span>
+                      <span className="transition-transform group-hover/link:translate-x-1">→</span>
+                    </a>
+                  </div>
+                ) : (
+                  <div className="relative z-50">
+                    <span className="inline-flex items-center gap-2 text-gray-400 font-semibold text-sm cursor-not-allowed" title="Link coming soon">
+                      <span>No Link Available</span>
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
