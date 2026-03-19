@@ -15,8 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jainil Portfolio",
   description: "Jainil Vyas personal portfolio",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   verification: {
-    google: "qZpj2svzehHxaWyXM3O5Uwxm5nuNNMMMZjksOFs2_EM"  // <-- Paste your code here
+    google: "qZpj2svzehHxaWyXM3O5Uwxm5nuNNMMMZjksOFs2_EM",
   },
 };
 
