@@ -24,6 +24,22 @@ export default function Certifications() {
       link: '/Introduction_To_Java_Certificate.pdf',
       icon: '☕',
     },
+    {
+      id: 4,
+      title: 'Inheritance and Data Structures in Java',
+      issuer: 'Certificate',
+      date: '2024',
+      link: '/Inheritance%20of%20java.pdf',
+      icon: '🧬',
+    },
+    {
+      id: 5,
+      title: '.NET',
+      issuer: 'Certificate',
+      date: '2026',
+      link: '/DotNet.pdf',
+      icon: '🟣',
+    },
   ];
 
   return (
